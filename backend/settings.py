@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-2lo6u9$tm!q_ulxvtpg#r^@p8*i4m6e+f-6&a%&x#kf)ru4r3h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["*","https://sow-gdch.onrender.com"]
 
 
 # Application definition
@@ -54,7 +54,8 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",  # Add your React app's origin
+    "http://localhost:5173",
+      "https://sow-frontend-tiqu.onrender.com/",  # Add your React app's origin
 ]
 ROOT_URLCONF = "backend.urls"
 
@@ -84,9 +85,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'sow',          # Your database name
-        'USER': 'apaar',   # Your PostgreSQL username
-        'PASSWORD': 'VZxKuPndcJlckwJpqCccOy1wFJphSjUI',  # Your PostgreSQL password
-        'HOST': 'dpg-cm4r7jnqd2ns73elovtg-a',    # Set your PostgreSQL host
+        'USER': 'backend',   # Your PostgreSQL username
+        'PASSWORD': 'apaar',  # Your PostgreSQL password
+        'HOST': 'localhost',    # Set your PostgreSQL host
         'PORT': '5432',         # Set your PostgreSQL port
     }
 }
